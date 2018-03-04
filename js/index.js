@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     var team1 = $('div#team1');
     var team2 = $('div#team2');
+    var audio = new Audio('audio/gong.mp3');
 
     team1.hide();
     team2.hide();
@@ -11,6 +12,7 @@ $(document).ready(function() {
     $(document).mousedown(function(e) {
         if (clicked) return true;
 
+        audio.play();
         // Check for left button
         if (e.button === 0) {
             team1.show();
